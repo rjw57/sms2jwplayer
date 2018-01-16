@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; sms2jwplayer  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="sms2jwplayer  documentation" href="index.html"/>
+        <link rel="prev" title="CSV Export" href="csvexport.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sms2jwplayer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csvexport.html">CSV Export</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.csv">CSV input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.util">Utility functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.genmrss">MRSS feed generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.fetch">Fetching video metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.genupdatejob">Determining metadata updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.applyupdatejob">Applying metadata updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sms2jwplayer.analytics">Extracting video view stats</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sms2jwplayer</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-sms2jwplayer.csv">
+<span id="csv-input"></span><h2>CSV input<a class="headerlink" href="#module-sms2jwplayer.csv" title="Permalink to this headline">¶</a></h2>
+<p>Parsing SMS export CSV format.</p>
+<dl class="class">
+<dt id="sms2jwplayer.csv.MediaItem">
+<em class="property">class </em><code class="descclassname">sms2jwplayer.csv.</code><code class="descname">MediaItem</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representation of a single media item within the SMS.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="csvexport.html"><span class="doc">CSV Export</span></a></p>
+</div>
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.abstract">
+<code class="descname">abstract</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.abstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 27</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.acl">
+<code class="descname">acl</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 17</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.aspect_ratio">
+<code class="descname">aspect_ratio</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.aspect_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 9</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.branding">
+<code class="descname">branding</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.branding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 22</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.clip_id">
+<code class="descname">clip_id</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.clip_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.collection_id">
+<code class="descname">collection_id</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.collection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 7</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.copyright">
+<code class="descname">copyright</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.copyright" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 13</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.created_at">
+<code class="descname">created_at</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.creator">
+<code class="descname">creator</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 10</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.description">
+<code class="descname">description</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.downloadable">
+<code class="descname">downloadable</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.downloadable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 25</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.dspace_path">
+<code class="descname">dspace_path</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.dspace_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 20</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.featured">
+<code class="descname">featured</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.featured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 21</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.filename">
+<code class="descname">filename</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.format">
+<code class="descname">format</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.image_id">
+<code class="descname">image_id</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 19</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.in_dspace">
+<code class="descname">in_dspace</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.in_dspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 11</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.instid">
+<code class="descname">instid</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.instid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 8</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.keywords">
+<code class="descname">keywords</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 15</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.language">
+<code class="descname">language</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 14</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.last_updated_at">
+<code class="descname">last_updated_at</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.last_updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 23</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.media_id">
+<code class="descname">media_id</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.media_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.priority">
+<code class="descname">priority</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 28</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.publisher">
+<code class="descname">publisher</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.publisher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 12</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.screencast">
+<code class="descname">screencast</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.screencast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 18</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.title">
+<code class="descname">title</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.updated_by">
+<code class="descname">updated_by</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 24</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.visibility">
+<code class="descname">visibility</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.visibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 16</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.csv.MediaItem.withdrawn">
+<code class="descname">withdrawn</code><a class="headerlink" href="#sms2jwplayer.csv.MediaItem.withdrawn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 26</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="sms2jwplayer.csv.load">
+<code class="descclassname">sms2jwplayer.csv.</code><code class="descname">load</code><span class="sig-paren">(</span><em>fobj</em>, <em>skip_header_row=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.csv.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an SMS export from a file object. Return a list of
+<a class="reference internal" href="#sms2jwplayer.csv.MediaItem" title="sms2jwplayer.csv.MediaItem"><code class="xref py py-class docutils literal"><span class="pre">MediaItem</span></code></a> instances. If <em>skip_header_row</em> is <code class="docutils literal"><span class="pre">True</span></code>, the
+first line of the CSV file is ignored.</p>
+<p>The CSV file must be in the format described in <a class="reference internal" href="csvexport.html"><span class="doc">CSV Export</span></a>. Any extra
+columns are ignored. The <code class="docutils literal"><span class="pre">media_id</span></code> and <code class="docutils literal"><span class="pre">clip_id</span></code> columns are converted
+to integers and the <code class="docutils literal"><span class="pre">created_at</span></code> column is parsed into a
+<code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code> instance.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sms2jwplayer.util">
+<span id="utility-functions"></span><h2>Utility functions<a class="headerlink" href="#module-sms2jwplayer.util" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#module-sms2jwplayer.util" title="sms2jwplayer.util"><code class="xref py py-mod docutils literal"><span class="pre">util</span></code></a> module contains general utility functions for the rest of the
+program to use.</p>
+<dl class="exception">
+<dt id="sms2jwplayer.util.JWPlatformClientError">
+<em class="property">exception </em><code class="descclassname">sms2jwplayer.util.</code><code class="descname">JWPlatformClientError</code><a class="headerlink" href="#sms2jwplayer.util.JWPlatformClientError" title="Permalink to this definition">¶</a></dt>
+<dd><p>An error which is thrown if appropriate credentials for the jwplatform cannot be found in the
+environment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sms2jwplayer.util.get_jwplatform_client">
+<code class="descclassname">sms2jwplayer.util.</code><code class="descname">get_jwplatform_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.util.get_jwplatform_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Examine the environment and return an authenticated jwplatform.Client instance. Raises
+JWPlatformClientError if credentials are not available</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sms2jwplayer.util.get_key_path">
+<code class="descclassname">sms2jwplayer.util.</code><code class="descname">get_key_path</code><span class="sig-paren">(</span><em>obj</em>, <em>keypath</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.util.get_key_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a dotted key path like “a.b.c”, attempt to retrieve obj[“a”][“b”][“c”]. If there is no
+such key at any stage, return None</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sms2jwplayer.util.input_stream">
+<code class="descclassname">sms2jwplayer.util.</code><code class="descname">input_stream</code><span class="sig-paren">(</span><em>opts</em>, <em>opt_key</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.util.input_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the docopt options dictionary, yield a file-like object suitable for reading input from.
+<em>opt_key</em> is the key used to retrieve the input file from the options.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sms2jwplayer.util.output_stream">
+<code class="descclassname">sms2jwplayer.util.</code><code class="descname">output_stream</code><span class="sig-paren">(</span><em>opts</em>, <em>opt_key='--output'</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.util.output_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the docopt options dictionary, yield a file-like object suitable for writing output to.
+<em>opt_key</em> is the key used to retrieve the output file from the options.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sms2jwplayer.genmrss">
+<span id="mrss-feed-generation"></span><h2>MRSS feed generation<a class="headerlink" href="#module-sms2jwplayer.genmrss" title="Permalink to this headline">¶</a></h2>
+<p>The genmrss subcommand can be used to generate an <a class="reference external" href="https://en.wikipedia.org/wiki/Media_RSS">MRSS</a> feed which is suitable for <a class="reference external" href="https://support.jwplayer.com/customer/portal/articles/2798456">bulk
+import into jwplayer</a>.</p>
+<dl class="function">
+<dt id="sms2jwplayer.genmrss.main">
+<code class="descclassname">sms2jwplayer.genmrss.</code><code class="descname">main</code><span class="sig-paren">(</span><em>opts</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.genmrss.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of the <code class="docutils literal"><span class="pre">sms2jwplayer</span> <span class="pre">genmrss</span></code> subcommand. <em>opts</em> is an
+options dictionary as returned by <code class="xref py py-func docutils literal"><span class="pre">docopt.docopt()</span></code>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sms2jwplayer.genmrss.MRSS_TEMPLATE_STR">
+<code class="descclassname">sms2jwplayer.genmrss.</code><code class="descname">MRSS_TEMPLATE_STR</code><em class="property"> = jinja2 template</em><a class="headerlink" href="#sms2jwplayer.genmrss.MRSS_TEMPLATE_STR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jinja2 template for MRSS feed output by <code class="docutils literal"><span class="pre">genmrss</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sms2jwplayer.fetch">
+<span id="fetching-video-metadata"></span><h2>Fetching video metadata<a class="headerlink" href="#module-sms2jwplayer.fetch" title="Permalink to this headline">¶</a></h2>
+<p>The fetch subcommand fetches metadata on jwplayer videos and stores it locally in JSON documents.</p>
+</div>
+<div class="section" id="module-sms2jwplayer.genupdatejob">
+<span id="determining-metadata-updates"></span><h2>Determining metadata updates<a class="headerlink" href="#module-sms2jwplayer.genupdatejob" title="Permalink to this headline">¶</a></h2>
+<p>The genupdatejob subcommand examines video metadata from jwplayer and the current SMS export and
+generates a list of updates which should be applied.</p>
+<p>It outputs a single JSON object with the following schema:</p>
+<div class="code json highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;updates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">...</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">jwplayer</span> <span class="n">key</span><span class="o">&gt;</span><span class="p">,</span>
+            <span class="s2">&quot;custom&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="o">&lt;</span><span class="n">dictionary</span> <span class="n">of</span> <span class="n">custom</span> <span class="n">properties</span> <span class="n">to</span> <span class="nb">set</span><span class="o">&gt;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="sms2jwplayer.genupdatejob.process_videos">
+<code class="descclassname">sms2jwplayer.genupdatejob.</code><code class="descname">process_videos</code><span class="sig-paren">(</span><em>fobj</em>, <em>items</em>, <em>videos</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.genupdatejob.process_videos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process video metadata records with reference to a dictionary of media items keyed by the
+stripped path. Write results to file as JSON document.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sms2jwplayer.applyupdatejob">
+<span id="applying-metadata-updates"></span><h2>Applying metadata updates<a class="headerlink" href="#module-sms2jwplayer.applyupdatejob" title="Permalink to this headline">¶</a></h2>
+<p>Apply update job as generated from genupdatejob. To avoid rate limit problems, calls to the
+jwplayer API are performed with exponential backoff.</p>
+<p>Takes as input a JSON document with the following schema.</p>
+<div class="code json highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;updates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">...</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">jwplayer</span> <span class="n">key</span><span class="o">&gt;</span><span class="p">,</span>
+            <span class="s2">&quot;custom&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="o">&lt;</span><span class="n">dictionary</span> <span class="n">of</span> <span class="n">custom</span> <span class="n">properties</span> <span class="n">to</span> <span class="nb">set</span><span class="o">&gt;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="data">
+<dt id="sms2jwplayer.applyupdatejob.MAX_ATTEMPTS">
+<code class="descclassname">sms2jwplayer.applyupdatejob.</code><code class="descname">MAX_ATTEMPTS</code><em class="property"> = 10</em><a class="headerlink" href="#sms2jwplayer.applyupdatejob.MAX_ATTEMPTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of attempts on an API call before giving up</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sms2jwplayer.analytics">
+<span id="extracting-video-view-stats"></span><h2>Extracting video view stats<a class="headerlink" href="#module-sms2jwplayer.analytics" title="Permalink to this headline">¶</a></h2>
+<p>The analytics subcommand generates a CSV suitable for use inside the SMS representing stats from
+jwplayer.</p>
+<p>The JWPLAYER_API_KEY and JWPLAYER_API_ANALYTICS_SECRET environment variables must be set.</p>
+<p>Output CSV headers:</p>
+<blockquote>
+<div><ul class="simple">
+<li>clip_id</li>
+<li>ip_addr</li>
+<li>is_rtsp</li>
+<li>is_itunes</li>
+<li>media_id</li>
+<li>collection_id</li>
+<li>instid</li>
+<li>format</li>
+<li>quality</li>
+<li>fetch_type</li>
+<li>lat</li>
+<li>long</li>
+<li>is_cam</li>
+<li>country</li>
+<li>num_hits</li>
+<li>num_bytes</li>
+</ul>
+</div></blockquote>
+<dl class="class">
+<dt id="sms2jwplayer.analytics.AnalyticsRow">
+<em class="property">class </em><code class="descclassname">sms2jwplayer.analytics.</code><code class="descname">AnalyticsRow</code><span class="sig-paren">(</span><em>media_id</em>, <em>country_code</em>, <em>plays</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.analytics.AnalyticsRow" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="sms2jwplayer.analytics.AnalyticsRow.country_code">
+<code class="descname">country_code</code><a class="headerlink" href="#sms2jwplayer.analytics.AnalyticsRow.country_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.AnalyticsRow.media_id">
+<code class="descname">media_id</code><a class="headerlink" href="#sms2jwplayer.analytics.AnalyticsRow.media_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.AnalyticsRow.plays">
+<code class="descname">plays</code><a class="headerlink" href="#sms2jwplayer.analytics.AnalyticsRow.plays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="sms2jwplayer.analytics.FORMAT_MAP">
+<code class="descclassname">sms2jwplayer.analytics.</code><code class="descname">FORMAT_MAP</code><em class="property"> = {'audio': 'mp3', 'video': 'mp4'}</em><a class="headerlink" href="#sms2jwplayer.analytics.FORMAT_MAP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map from jwplatform mediatype to SMS format</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="sms2jwplayer.analytics.MAX_ATTEMPTS">
+<code class="descclassname">sms2jwplayer.analytics.</code><code class="descname">MAX_ATTEMPTS</code><em class="property"> = 10</em><a class="headerlink" href="#sms2jwplayer.analytics.MAX_ATTEMPTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of attempts on an API call before giving up</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sms2jwplayer.analytics.OutputRow">
+<em class="property">class </em><code class="descclassname">sms2jwplayer.analytics.</code><code class="descname">OutputRow</code><span class="sig-paren">(</span><em>clip_id</em>, <em>ip_addr</em>, <em>is_rtsp</em>, <em>is_itunes</em>, <em>media_id</em>, <em>collection_id</em>, <em>instid</em>, <em>format</em>, <em>quality</em>, <em>fetch_type</em>, <em>lat</em>, <em>long</em>, <em>is_cam</em>, <em>country</em>, <em>num_hits</em>, <em>num_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.clip_id">
+<code class="descname">clip_id</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.clip_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.collection_id">
+<code class="descname">collection_id</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.collection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.country">
+<code class="descname">country</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 13</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.fetch_type">
+<code class="descname">fetch_type</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.fetch_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 9</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.format">
+<code class="descname">format</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 7</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.instid">
+<code class="descname">instid</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.instid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.ip_addr">
+<code class="descname">ip_addr</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.ip_addr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.is_cam">
+<code class="descname">is_cam</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.is_cam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 12</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.is_itunes">
+<code class="descname">is_itunes</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.is_itunes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.is_rtsp">
+<code class="descname">is_rtsp</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.is_rtsp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.lat">
+<code class="descname">lat</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.lat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 10</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.long">
+<code class="descname">long</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.long" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 11</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.media_id">
+<code class="descname">media_id</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.media_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.num_bytes">
+<code class="descname">num_bytes</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.num_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 15</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.num_hits">
+<code class="descname">num_hits</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.num_hits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 14</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sms2jwplayer.analytics.OutputRow.quality">
+<code class="descname">quality</code><a class="headerlink" href="#sms2jwplayer.analytics.OutputRow.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 8</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="csvexport.html" class="btn btn-neutral" title="CSV Export" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, University of Cambridge Information Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
